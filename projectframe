@@ -1,0 +1,94 @@
+import random
+
+
+print('There are many genres of anime out there like:')
+print('1. RomCom')
+print('2. Action')
+print('3. Slice of Life')
+print('4. Isekai')
+print('5. Sports')
+genre = int(input('Pick Your genre   '))
+
+print('There are 3 language options in anime:')
+print('1. Japanese + Subbed')
+print('2. Chinese + Subbed')
+print('3. English Dubbed')
+lang = int(input('Pick Your preferred language   '))
+
+yn = ""
+
+if genre == 1:
+    print('RomCom')
+    if lang == 1:
+        ls = ['Horimiya', 'Tonikaku kawaii', 'Oregairu', 'My Little Monster', '']
+        print('Good choice')
+        t = random.randrange(len(ls))
+        print(ls[t])
+        yn = input("Have you watched this show y/n")
+        while yn == "y":
+            ls.remove(t)
+            t1 = random.randrange(len(ls))
+            if t != t1:
+                print(ls[t1])
+                yn = input("Have you watched this show y/n")
+        else:
+            print("Enjoy the show")
+
+    elif lang == 2:
+        print('Are you sure?')
+    elif lang == 3:
+        print('Why are you even alive')
+    else:
+        print('Wrong choice')
+
+
+elif genre == 2:
+    print('Action')
+    if lang == 1:
+        print('Good choice')
+    elif lang == 2:
+        print('Are you sure?')
+    elif lang == 3:
+        print('Why are you even alive')
+    else:
+        print('Wrong choice')
+elif genre == 3:
+    print('Slice of Life')
+    if lang == 1:
+        print('Good choice')
+    elif lang == 2:
+        print('Are you sure?')
+    else:
+        print('Wrong choice')
+
+elif genre == 4:
+    print('Isekai')
+    if lang == 1:
+        print('Good choice')
+    elif lang == 2:
+        print('Are you sure?')
+    else:
+        print('Wrong choice')
+
+elif genre == 5:
+    print('Sports')
+    ls = ['Ao Ashi', 'Blue lock', 'Love All Play', 'Haikyuu', 'Free', 'Prince of Stride', '']
+    if lang == 1:
+        t = random.randrange(len(ls))
+        print(ls[t])
+        yn = input("Have you watched this show y/n")
+        while yn == "y":
+            ls.remove(t)
+            t1 = random.randrange(len(ls))
+            if t != t1:
+                print(ls[t1])
+                yn = input("Have you watched this show y/n")
+        else:
+            print("Enjoy the show")
+    elif lang == 2:
+        print('Are you sure?')
+    else:
+        print('Wrong choice')
+
+else:
+    print('Wrong Choice')
